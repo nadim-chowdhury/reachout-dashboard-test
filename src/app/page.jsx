@@ -10,13 +10,15 @@ export default function Home() {
 
   const dataUrl = "https://jsonplaceholder.typicode.com/users";
 
+  const handleSort = (value) => {};
+
   useEffect(() => {
     axios.get(dataUrl).then((res) => setData(res.data));
   }, []);
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-x-5 gap-y-8">
+      <div className="sm:grid sm:grid-cols-3 sm:gap-x-5 sm:gap-y-8">
         {cardData.map((data) => (
           <Card key={data.id} imgSrc={data.imgSrc} title={data.title} />
         ))}
@@ -45,7 +47,7 @@ export default function Home() {
       <table className="w-full min-w-max table-auto text-left">
         <thead className="border-b border-blue-gray-100 bg-blue-50 p-4">
           <tr>
-            <th>
+            <th onClick={handleSort("title")}>
               <div className="th-flex">
                 <span>Job Title</span>
                 <svg
@@ -64,9 +66,9 @@ export default function Home() {
                 </svg>
               </div>
             </th>
-            <th>
+            <th onClick={handleSort("status")}>
               <div className="th-flex">
-                <span> Status</span>
+                <span>Status</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -83,9 +85,9 @@ export default function Home() {
                 </svg>
               </div>
             </th>
-            <th>
+            <th onClick={handleSort("manager")}>
               <div className="th-flex">
-                <span> Hiring Manager</span>
+                <span>Hiring Manager</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -102,7 +104,7 @@ export default function Home() {
                 </svg>
               </div>
             </th>
-            <th>
+            <th onClick={handleSort("stage")}>
               <div className="th-flex">
                 <span>Stage</span>
 
@@ -122,9 +124,9 @@ export default function Home() {
                 </svg>
               </div>
             </th>
-            <th>
+            <th onClick={handleSort("priority")}>
               <div className="th-flex">
-                <span> Priority</span>
+                <span>Priority</span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

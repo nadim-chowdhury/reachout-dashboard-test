@@ -15,7 +15,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center">
-          <div className="p-2 border rounded ml-[78px] mr-8">
+          <div className="p-2 border rounded sm:ml-[78px] sm:mr-8">
             <Image
               src="/arrow-left.png"
               width={18}
@@ -29,7 +29,7 @@ export default function Header() {
       </div>
 
       <div className="flex items-center">
-        <div className="bg-blue-100 p-3 rounded-full mr-2">
+        <div className="bg-blue-100 p-3 rounded-full sm:mr-2">
           <Image
             src="/message.png"
             width={18}
@@ -38,7 +38,7 @@ export default function Header() {
             priority={true}
           />
         </div>
-        <div className="bg-blue-100 p-3 rounded-full mr-4">
+        <div className="bg-blue-100 p-3 rounded-full sm:mr-4">
           <Image
             src="/notifications.png"
             width={18}
@@ -47,7 +47,7 @@ export default function Header() {
             priority={true}
           />
         </div>
-        <div className="border-l pl-4 flex items-center">
+        <div className="border-l sm:pl-4 flex items-center">
           <Image
             src="/user.png"
             width={44}

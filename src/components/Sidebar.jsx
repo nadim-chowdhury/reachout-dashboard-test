@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <nav className="bg-white h-screen flex flex-col justify-between max-w-[280px] sticky top-0">
+    <nav className="bg-white h-screen sm:flex sm:flex-col sm:justify-between max-w-[280px] sticky top-0 hidden">
       <div>
         <div className="mt-8 mb-6">
           <button className="bg-green-500 text-white rounded-full ml-8 px-4 py-2">

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.th-flex {
+  @apply p-4 rounded-tl-md flex justify-between;
+}

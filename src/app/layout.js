@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import "./globals.css";
+import "./globals.scss";
 import { Inter } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <section className="flex">
           <Sidebar />
 
-          <main className="p-8">{children}</main>
+          <main className="p-8 w-full">{children}</main>
         </section>
       </body>
     </html>

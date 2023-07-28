@@ -1,16 +1,29 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import Card from "@/components/Card";
 import { cardData } from "@/data/cardData";
 import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   const [data, setData] = useState([]);
 
   const dataUrl = "https://jsonplaceholder.typicode.com/users";
 
-  const handleSort = (value) => {};
+  const handleSort = (value) => {
+    // if (value) {
+    //   const sortedData = [...data].sort((a, b) => {
+    //     if (value === "title") {
+    //       return a.name.localeCompare(b.name);
+    //     } else if (value === "status") {
+    //       return a.username.localeCompare(b.username);
+    //     } else if (value === "manager") {
+    //       return a.address.city.localeCompare(b.address.city);
+    //     }
+    //   });
+    //   setData(sortedData);
+    // }
+  };
 
   useEffect(() => {
     axios.get(dataUrl).then((res) => setData(res.data));

@@ -16,9 +16,10 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} bg-blue-100`}>
         <Header />
 
-        <section>
+        <section className="flex">
           <Sidebar />
-          {children}
+
+          <main className="p-8">{children}</main>
         </section>
       </body>
     </html>
